@@ -1,0 +1,202 @@
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Milky Way', 'Our home galaxy', 8, 1000000000, 100000000, 100000, true);
+
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Andromeda', 'Spiral galaxy', 1, 100000000, 50000000, 2500000, true);
+
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Triangulum', 'Small galaxy', 0, 50000000, 10000000, 3000000, false);
+
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Sombrero', 'Edge-on spiral galaxy', 3, 200000000, 2000000, 29000000, true);
+
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Whirlpool', 'Interacting spiral galaxy', 2, 150000000, 3000000, 23000000, true);
+
+INSERT INTO galaxy (name, description, num_planets, num_stars, num_comets, distance_from_earth_ly, is_active)
+VALUES ('Centaurus A', 'Elliptical galaxy with an active nucleus', 0, 50000000, 15000000, 11000000, true);
+
+
+
+
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Sun', 'Our star', 1392684, 19890000000, 0.00001581, false, 1);
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Sirius', 'Brightest star in the night sky', 19830000, 33300000, 8.6, false, 1);
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Alpha Centauri A', 'Closest star system to Earth', 1914156, 224700000, 4.37, false, 1);
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Betelgeuse', 'Red supergiant star in Orion', 1409460000, 2330000, 640, false, 1);
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Proxima Centauri', 'Closest known star to the Sun', 201320, 225000000, 4.24, false, 1);
+
+INSERT INTO star (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, galaxy_id)
+VALUES ('Vega', 'Bright star in the constellation Lyra', 35674000, 2540000, 25.04, false, 2);
+
+
+
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Earth', 'Our home planet', 12742, 597200000, 0.00001601, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Mars', 'The red planet', 6779, 64171000, 0.00002342, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Jupiter', 'Largest planet in our solar system', 139822, 18980000, 0.00005056, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Venus', 'The morning and evening star', 12104, 486770000, 0.00001208, false, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Saturn', 'Ringed planet', 116464, 56840000, 0.0000922, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Neptune', 'Blue gas giant', 49244, 10243000, 0.00012056, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Uranus', 'Tilted ice giant', 50724, 86832000, 0.00007956, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Mercury', 'Closest planet to the Sun', 4879, 33011000, 0.00000535, false, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Pluto', 'Dwarf planet at the edge of the solar system', 2370, 130000, 0.00000266, true, 1);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('Kepler-452b', 'Exoplanet similar to Earth', 20851, 136570000, 1400, false, 2);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('HD 209458 b', 'Hot Jupiter exoplanet', 143000, 10800000, 150, false, 3);
+
+INSERT INTO planet (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, has_a_moon, star_id)
+VALUES ('PSR B1257+12 A', 'Exoplanet orbiting a pulsar', 8000, 21589000, 2300, false, 4);
+SELECT setval('planet_planet_id_seq', 1, false);
+
+
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Luna', 'Earth natural satellite', 3474, 734770000, 0.0000003844, true, 1);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Phobos', 'Mars largest moon', 22, 1065800, 0.00000002, true, 2);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Deimos', 'Mars smaller moon', 12, 147600, 0.00000002, true, 2);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Io', 'Jupiter moon with active volcanoes', 3660, 89319000, 0.0000003888, true, 3);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Europa', 'Jupiter ice-covered moon', 3122, 47970000, 0.0000003888, true, 3);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Ganymede', 'Largest moon in the solar system', 5262, 148190000, 0.0000003888, true, 3);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Callisto', 'Jupiter heavily cratered moon', 4821, 107590000, 0.0000003888, true, 3);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Titan', 'Saturn largest moon with thick atmosphere', 5150, 134550000, 0.0000009296, true, 5);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Enceladus', 'Saturn moon with geysers', 504, 1076000, 0.0000009296, true, 5);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Mimas', 'Saturn moon with a large crater', 397, 37493, 0.0000009296, true, 5);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Triton', 'Neptune largest moon', 2707, 21400000, 0.00000274, true, 6);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Nereid', 'Neptune irregular moon', 340, 300000, 0.00000274, false, 6);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Oberon', 'Uranus moon', 1522, 30140000, 0.00000229, true, 7);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Miranda', 'Uranus moon with a strange surface', 471, 659000, 0.00000229, true, 7);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Ariel', 'Uranus moon', 1157, 13300000, 0.00000229, true, 7);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Titania', 'Uranus largest moon', 1578, 35270000, 0.00000229, true, 7);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Triton', 'Pluto largest moon', 2707, 21400000, 0.00000274, true, 9);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('Charon', 'Pluto largest moon', 1212, 1550000, 0.00000274, true, 9);
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('PSR B1257+12 A b', 'Exoplanet moon orbiting a pulsar', 3500, 100000, 2300, true, 12);
+
+
+INSERT INTO moon (name, description, diameter_in_km, mass_in_kg, distance_from_earth_ly, regular_orbit, planet_id)
+VALUES ('solid', 'nothing moon', 341212, 16550000, 0.000374, true, 3);
+
+
+
+ALTER TABLE moon
+ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE star
+ALTER COLUMN name SET NOT NULL;
+ALTER TABLE galaxy
+ALTER COLUMN name SET NOT NULL;
+ALTER TABLE planet
+ALTER COLUMN name SET NOT NULL;
+ALTER TABLE comet
+ALTER COLUMN name SET NOT NULL;
+
+ALTER TABLE moon
+ADD CONSTRAINT unique_moon_name UNIQUE (name);
+ALTER TABLE star
+ADD CONSTRAINT unique_star_name UNIQUE (name);
+ALTER TABLE galaxy
+ADD CONSTRAINT unique_galaxy_name UNIQUE (name);
+ALTER TABLE planet
+ADD CONSTRAINT unique_planet_name UNIQUE (name);
+ALTER TABLE comet
+ADD CONSTRAINT unique_comet_name UNIQUE (name);
+
+ALTER TABLE star
+ADD CONSTRAINT unique_star_name UNIQUE (name);
+
+
+
+ALTER TABLE moon
+ADD CONSTRAINT unique_concatenated_name UNIQUE (concatenated_name);
+
+
+
+ALTER TABLE moon
+ADD COLUMN concatenated_name text;
+
+UPDATE moon
+SET concatenated_name = CONCAT(name, '_', planet_id);
+
+
+
+
+-- Inserting a comet with all columns specified
+INSERT INTO comet (name, description, diameter_in_km, mass_in_kg, speed_in_km_h)
+VALUES ('Halley Comet', 'Famous periodic comet', 11, 22000000, 70500.5);
+
+-- Inserting a comet with NULL description
+INSERT INTO comet (name, description, diameter_in_km, mass_in_kg, speed_in_km_h)
+VALUES ('Encke', NULL, 4, 11000000, 37000.8);
+
+-- Inserting a comet with all columns specified
+INSERT INTO comet (name, description, diameter_in_km, mass_in_kg, speed_in_km_h)
+VALUES ('Hale-Bopp', 'Great Comet of 1997', 60, 44000000, 21300.2);
+
+-- Inserting a comet with NULL mass and speed
+INSERT INTO comet (name, description, diameter_in_km, mass_in_kg, speed_in_km_h)
+VALUES ('McNaught', 'Brightest comet in over 40 years', 7, NULL, NULL);
